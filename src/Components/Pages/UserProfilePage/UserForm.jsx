@@ -18,7 +18,7 @@ const UserForm = ({ id }) => {
         })
         if (valid) {
             const obj = {
-                userId:id,
+                user_Id:id,
                 BloodType,
                 image:'https://i.imgur.com/I80W1Q0.png'
             }
@@ -40,7 +40,7 @@ const UserForm = ({ id }) => {
 
     return (
         <div>
-            <h1>Become A patient</h1>
+            <h3 style={{marginTop:'40px'}}>In Order you use our site services please enter your BloodType</h3>
             <form onSubmit={postPatient}  >
                 <TextField className='Input'
                     label="Your Blood Type"
@@ -50,6 +50,7 @@ const UserForm = ({ id }) => {
                     name='BloodType'
                     required
                 />
+                
                 <br />
 
                 <Button variant='contained' color='primary' type='submit' className='dialog_button' > Submit </Button>
