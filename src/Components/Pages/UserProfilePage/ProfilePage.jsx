@@ -25,7 +25,7 @@ class UsersProfile extends React.Component {
                 let resultObject = {}
                 data.map(element => {
                     if (element.patient) {
-                        resultObject[element.patient.userId] = {
+                        resultObject[element.patient.user_Id] = {
                             image: element.patient.image,
                             name: element.name
                         }

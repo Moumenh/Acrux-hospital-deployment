@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom';
 import { setLastTextObject } from "../../../../../Redux/User/userActions"
 const ChatMessage = (props) => {
     let collectionLink = `messages/${props.fetchId}/${props.match.params.id}`// logged in as patient
-    // console.log("collectionLink", collectionLink)
+    console.log("collectionLink", props.match.params.id)
 
     if (props.role === "doctor") {
         collectionLink = `messages/${props.match.params.id}/${props.fetchId}`
