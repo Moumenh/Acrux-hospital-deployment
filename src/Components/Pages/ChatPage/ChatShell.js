@@ -22,7 +22,7 @@ class ChatShell extends React.Component {
     }
     componentDidMount=()=> {
         const pk = this.props.fetchId
-        console.log("gggggggggggggggggggggggggggggggggggggg",this.props)
+        // console.log("gggggggggggggggggggggggggggggggggggggg",this.props)
         this.getDoctors({pk})
            
 
@@ -39,7 +39,7 @@ class ChatShell extends React.Component {
             .then(data => {
                 this.props.setMessageContacts(data.doctors)
                 this.setState({ results: data.doctors })
-                console.log("gggggggggggggggggggggggggggggggggggggg",data.doctors)
+                // console.log("gggggggggggggggggggggggggggggggggggggg",data.doctors)
             })
        }
        if(this.props.role==="doctor"){
@@ -57,7 +57,7 @@ class ChatShell extends React.Component {
         this.setState({name})
     }
     render() {
-        console.log("this.state",this.state)
+        // console.log("this.state",this.state)
         return (
             <div id="rootme">
                 <div id="chat-container">

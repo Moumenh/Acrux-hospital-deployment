@@ -20,7 +20,7 @@ class DoctorPage extends React.Component {
         fetch('https://acrux-hospital.herokuapp.com/doctor/')
             .then(response => response.json())
             .then(doctor => {
-                console.log("result", doctor)
+                // console.log("result", doctor)
                 this.props.setCurrentDoctor(doctor)
                 return doctor
             })
@@ -31,7 +31,7 @@ class DoctorPage extends React.Component {
 
     render() {
         const { currentDoctor } = this.props
-        console.log(currentDoctor)
+        // console.log(currentDoctor)
 
 
         return (

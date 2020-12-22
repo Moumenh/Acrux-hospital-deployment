@@ -15,30 +15,30 @@ const useStyles = makeStyles({
 
 
 
-export default function DepCard({department}) {
+export default function DepCard({ department }) {
   // console.log('err',department)
   const classes = useStyles();
   return (
-    <Link to={`/department/${department.pk}`}  style={{textDecoration:'none'}}>
-    <Card className={classes.root} style={{margin:'30px'}}>
-            <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image={department.image}
-                    title="Contemplative Reptile"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {department.title}
+    <Link to={`/department/${department.pk}`} style={{ textDecoration: 'none' }}>
+      <Card className={classes.root} style={{ margin: '30px' }}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={department.image}
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {department.title}
             </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p" className='dep_text'>
-                        {department.about}
+            <Typography variant="body2" color="textSecondary" component="p" className='dep_text'>
+              {department.about}
             </Typography>
-                </CardContent>
-            </CardActionArea>
-        </Card>
-        </Link>
-    
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Link>
+
   );
 }
 

@@ -25,7 +25,7 @@ class BloodBankMain extends React.Component {
           BloodUsers.push(doctors[i])
         }
         
-        console.log("doctors",doctors)
+        // console.log("doctors",doctors)
       })
         //fetch patient
         fetch('https://acrux-hospital.herokuapp.com/patient/')
@@ -35,10 +35,10 @@ class BloodBankMain extends React.Component {
             BloodUsers.push(patients[i])
           }
         
-          console.log("patients",patients)
+          // console.log("patients",patients)
         })
        this.setState({users :BloodUsers})
-        console.log("BloodUsers",this.state.users)
+        // console.log("BloodUsers",this.state.users)
         // const filteredusers = this.state.users.filter((user)=>{
         //   return user.BloodType.toLowerCase().includes(this.state.search.toLowerCase())
         // })
@@ -46,7 +46,7 @@ class BloodBankMain extends React.Component {
   }
   
 handleInput=(e)=>{
-  console.log(e.target.value)
+  // console.log(e.target.value)
 this.setState({search:e.target.value})
 }
 

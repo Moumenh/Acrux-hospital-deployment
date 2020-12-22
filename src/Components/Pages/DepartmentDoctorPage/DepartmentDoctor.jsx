@@ -10,7 +10,7 @@ class DepartmentDoctor extends React.Component {
     }
 
     componentDidMount() {
-        console.log("d",this.props)
+        // console.log("d",this.props)
         const departmentId = this.props.match.params.id
         this.getDoctors({pk : departmentId})
     }

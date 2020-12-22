@@ -1,8 +1,8 @@
-import React, { useState,useRef } from 'react';
+import React, { useState } from 'react';
 import firebase from 'firebase/app';
 import {firestore} from "../../../../../firebase/firebase.utils" 
 import FormButton from '../controls/buttons/FormButton';
-import AttachmentIcon from '../controls/icons/attachment-icon/AttachmentIcon';
+// import AttachmentIcon from '../controls/icons/attachment-icon/AttachmentIcon';
 
 import './ChatForm.scss';
 import { connect } from 'react-redux';

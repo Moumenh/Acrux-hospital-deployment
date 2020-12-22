@@ -8,11 +8,11 @@ import { withRouter } from 'react-router-dom';
 import { setLastTextObject } from "../../../../../Redux/User/userActions"
 const ChatMessage = (props) => {
     let collectionLink = `messages/${props.fetchId}/${props.match.params.id}`// logged in as patient
-    console.log("collectionLink", collectionLink)
+    // console.log("collectionLink", collectionLink)
 
     if (props.role === "doctor") {
         collectionLink = `messages/${props.match.params.id}/${props.fetchId}`
-        console.log("collectionLink", collectionLink)
+        // console.log("collectionLink", collectionLink)
     }
     const dummy = useRef();
     const messagesRef = firestore.collection(collectionLink);
@@ -24,12 +24,12 @@ const ChatMessage = (props) => {
         if (props.role === "doctor") {
             let obj = {}
             await props.contactArray.map(async (element) => {
-                console.log('el', element)
+                // console.log('el', element)
                 let collectionLinks = `messages/${element.patientId}/${props.fetchId}`
                 await firestore.collection(collectionLinks).orderBy('createdAt').get().then(data => {
-                    if(data.docs[data.docs.length - 1]){
+                    if (data.docs[data.docs.length - 1]) {
                         obj[element.patientId] = data.docs[data.docs.length - 1].data().text
-                        console.log("ssssssssssssssssssss", data.docs[data.docs.length - 1].data().text)
+                        // console.log("ssssssssssssssssssss", data.docs[data.docs.length - 1].data().text)
                     }
                 })
                 props.setLastTextObject(obj)
@@ -39,9 +39,9 @@ const ChatMessage = (props) => {
             await props.contactArray.map(async (element) => {
                 let collectionLinks = `messages/${props.fetchId}/${element.doctorId}`
                 await firestore.collection(collectionLinks).orderBy('createdAt').get().then(data => {
-                    if(data.docs[data.docs.length - 1]){
-                    obj[element.doctorId] = data.docs[data.docs.length - 1].data().text
-                    console.log("ssssssssssssssssssss", data.docs[data.docs.length - 1].data().text)
+                    if (data.docs[data.docs.length - 1]) {
+                        obj[element.doctorId] = data.docs[data.docs.length - 1].data().text
+                        // console.log("ssssssssssssssssssss", data.docs[data.docs.length - 1].data().text)
                     }
                 })
                 props.setLastTextObject(obj)

@@ -18,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function PatientsCard({ patient,getAppointments }) {
+export default function PatientsCard({ patient, getAppointments }) {
     const classes = useStyles();
-    console.log('details', patient)
+    // console.log('details', patient)
 
     const acceptPatient = () => {
         const obj = { patientId: patient.patientId, doctorId: patient.doctorId }
@@ -53,7 +53,7 @@ export default function PatientsCard({ patient,getAppointments }) {
         fetch('https://acrux-hospital.herokuapp.com/day/delete', requestOptions)
             .then(response => response.json())
             .then(data => {
-                console.log('deleted',data)
+                // console.log('deleted',data)
                 getAppointments()
                 // window.location.reload()
             })
@@ -79,11 +79,11 @@ export default function PatientsCard({ patient,getAppointments }) {
                                 Hour : {patient.hour}
                             </Typography>
                         </div>
-                        <div style={{display:'flex',flexDirection:'column',marginLeft: '80px'}}>
-                        <CheckIcon onClick={acceptPatient} style={{ color: 'green', cursor: 'pointer' }} />
-                        <CloseIcon onClick={declinePatient} style={{ color: 'red', cursor: 'pointer' }} /> 
+                        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '80px' }}>
+                            <CheckIcon onClick={acceptPatient} style={{ color: 'green', cursor: 'pointer' }} />
+                            <CloseIcon onClick={declinePatient} style={{ color: 'red', cursor: 'pointer' }} />
                         </div>
-                        
+
 
                     </div>
 

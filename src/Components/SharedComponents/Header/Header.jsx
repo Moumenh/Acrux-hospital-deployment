@@ -3,10 +3,10 @@ import './header.css'
 import { connect } from "react-redux"
 import { Link } from 'react-router-dom'
 import RegisterDialog from "./RegisterDialog"
-import { Button, Avatar, Typography } from '@material-ui/core'
+import { Button, Avatar } from '@material-ui/core'
 import { setCurrentUser, setUserRole, setUserImage, setMessageContacts, setLastTextObject, setContactTitle, setFetchId, setDoctorId } from '../../../Redux/User/userActions'
 
-const Header = ({ currentUser, setLastTextObject, setCurrentUser, setUserRole, image, setUserImage, setMessageContacts, setContactTitle, setFetchId, setDoctorId }) => {
+const Header = ({ currentUser, setLastTextObject, setCurrentUser, setUserRole, image, setUserImage, setMessageContacts, setContactTitle, setFetchId, setDoctorId, role }) => {
     // console.log(currentUser)
     return (
 
@@ -19,15 +19,17 @@ const Header = ({ currentUser, setLastTextObject, setCurrentUser, setUserRole, i
                 <Link to='/doctors' style={{ textDecoration: "none" }}><h4 className='header__taps'> Doctors </h4></Link>
                 <Link to='/departments' style={{ textDecoration: "none" }}><h4 className='header__taps'> Departments </h4></Link>
                 <Link to='/about' style={{ textDecoration: "none" }}><h4 className='header__taps'> About Us </h4></Link>
-                <Link to='/bloodbank' style={{ textDecoration: "none" }}><h4 className='header__taps'> BloodBank </h4></Link>
+                
                 {
                     currentUser ?
                         <div className='header__contents'>
+                            {
+                                (role === 'doctor') &&  <Link to='/bloodbank' style={{ textDecoration: "none" }}><h4 className='header__taps'> BloodBank </h4></Link>
+                            }
                             <Link to='/profile'>
                                 <Avatar style={{ marginRight: '20px' }} alt={currentUser} src={image} />
                             </Link>
                            
-
                             <Button variant="outlined" color="primary" onClick={() => {
                                 localStorage.removeItem('Authorization')
                                 setCurrentUser({
@@ -53,10 +55,11 @@ const Header = ({ currentUser, setLastTextObject, setCurrentUser, setUserRole, i
     )
 }
 
-const mapStateToProps = ({ user: { currentUser, image } }) => {
+const mapStateToProps = ({ user: { currentUser, image, role } }) => {
     return {
         currentUser,
-        image
+        image,
+        role
     }
 }
 

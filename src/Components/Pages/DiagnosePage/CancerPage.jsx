@@ -24,7 +24,7 @@ class CancerPage extends React.Component {
     handleChange = (e) => {
         const { name, value } = e.target
         this.setState({ [name]: value })
-        console.log(value)
+        // console.log(value)
     }
 
     postRequest = () => {
@@ -39,14 +39,14 @@ class CancerPage extends React.Component {
         fetch('https://acrux-hospital.herokuapp.com/doctor/cancer', requestOptions)
             .then(response => response.json())
             .then(result => {
-                console.log(result)
+                // console.log(result)
                 if (result.status === 'OK') {
                     this.setState({
                         probability: result.probability,
                         label: result.label
                     })
                 } else {
-                    console.log(result)
+                    alert('Please Enter Valid Values')
                 }
             })
     }
@@ -62,9 +62,9 @@ class CancerPage extends React.Component {
                 </div>
                 <h3 id="cancer_title">Cancer Form</h3>
 
-                <div className='cancer_form'>
-                    <form onSubmit={this.onSubmit} className='form_textfield'>
-                        <div className='cancer_form1'>
+                <div className='cancer__form'>
+                    <form onSubmit={this.onSubmit}>
+                        
                             <TextField id="standard"  label="Clump_Thickness(1 - 10)" onChange={this.handleChange} name='Clump_Thickness' type='text' value={Clump_Thickness} required />
                             <br />
                             <TextField id="standard" label="Cell_Size_Uniformity(1 - 10)" onChange={this.handleChange} name='Cell_Size_Uniformity' type='text' value={Cell_Size_Uniformity} required />
@@ -82,9 +82,9 @@ class CancerPage extends React.Component {
                             <TextField id="standard" label="Normal_Nucleoli(1 - 10)" onChange={this.handleChange} name='Normal_Nucleoli' type='text' value={Normal_Nucleoli} required />
                             <br />
                             <TextField id="standard" label="Mitoses(1 - 10)" onChange={this.handleChange} name='Mitoses' type='text' value={Mitoses} required />
-                        </div>
+                        
                         <br />
-                        <div className='cancer_result'>
+                        <div style={{marginTop:'40px'}} >
                             <CustomizedDialogs result={this.postRequest} label={label} probability={probability} />
                         </div>
                     </form>

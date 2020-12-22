@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextField, Button } from '@material-ui/core';
+import { TextField } from '@material-ui/core';
 import './Diagnose.css'
 import CustomizedDialogs from './DjagnoseResult'
 
@@ -28,7 +28,7 @@ class DiagnosePage extends React.Component {
     handleChange = (e) => {
         const { name, value } = e.target
         this.setState({ [name]: value })
-        console.log(value)
+        // console.log(value)
     }
 
     postRequest = () => {
@@ -43,14 +43,14 @@ class DiagnosePage extends React.Component {
         fetch('https://acrux-hospital.herokuapp.com/doctor/heart', requestOptions)
             .then(response => response.json())
             .then(result => {
-                console.log(result)
+                // console.log(result)
                 if (result.status === 'OK') {
                     this.setState({
                         probability: result.probability,
                         label: result.label
                     })
                 } else {
-                    console.log(result)
+                    alert('Please Enter Valid Values')
                 }
             })
     }

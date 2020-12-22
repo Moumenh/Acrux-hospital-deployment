@@ -11,7 +11,7 @@ export default function DatePicker({ setDate, getDates, setAvHour, doctorId }) {
   // The first commit of Material-UI
 
   const [selectedDate, setSelectedDate] = React.useState(new Date());
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
   const today = new Date();
   const convert = (str) => {
     var date = new Date(str),
@@ -33,7 +33,7 @@ export default function DatePicker({ setDate, getDates, setAvHour, doctorId }) {
   }
 
   const handleDateChange = (date) => {
-    console.log({ date: convert(date), doctorId })
+    // console.log({ date: convert(date), doctorId })
     setSelectedDate(date)
     setDate(convert(date))
     PostDate({ date: convert(date), doctorId })

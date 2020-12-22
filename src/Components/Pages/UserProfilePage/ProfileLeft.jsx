@@ -4,7 +4,7 @@ import { setCurrentUser, setUserImage } from "../../../Redux/User/userActions"
 
 const ProfileLeft = ({ currentUser, email, image, role, patientId, doctorId, setUserImage }) => {
 
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
   // console.log('profileImage', profileImage)
 
   const uploadImage = (e) => {
@@ -68,7 +68,7 @@ const ProfileLeft = ({ currentUser, email, image, role, patientId, doctorId, set
             className='user_inputfile'
             onChange={uploadImage}
           />
-          <label for="file">Change Profile Picture</label>
+          <label htmlFor="file">Change Profile Picture</label>
         </div>
       </div>
     </div>

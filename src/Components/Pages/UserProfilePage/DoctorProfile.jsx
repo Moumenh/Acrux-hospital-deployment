@@ -6,10 +6,14 @@ import { Link } from "react-router-dom"
 import { Button } from '@material-ui/core'
 const DoctorProfile = ({ setMessageContacts, role, fetchId, contactArray, setContactTitle }) => {
 
+    // console.log('id',fetchId)
+    
     useEffect(() => {
         const pk = fetchId
         getDoctors({ pk })
-    }, []);
+    }, [fetchId]);
+
+
     const getDoctors = (obj) => {
         const requestOptions = {
             method: 'POST',
@@ -35,7 +39,7 @@ const DoctorProfile = ({ setMessageContacts, role, fetchId, contactArray, setCon
     }
     // console.log("contactArray", contactArray)
     const handleSetName = (contact) => {
-        console.log("fffffffffffffffff00", contact)
+        // console.log("fffffffffffffffff00", contact)
         setContactTitle(contact)
     }
     return (

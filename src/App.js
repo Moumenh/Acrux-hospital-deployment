@@ -20,11 +20,7 @@ import AboutUs from './Components/Pages/AboutUsPage/AboutUs'
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
   
-  }
-
 
   componentDidMount = () => {
     this.loadUser()
@@ -33,7 +29,7 @@ class App extends React.Component {
       .then(data => {
         //this.setState({departments : data})
         this.props.viewDepartments(data)
-        console.log("dep", data)
+        // console.log("dep", data)
       })
       
 
@@ -50,9 +46,9 @@ class App extends React.Component {
     return fetch('https://acrux-hospital.herokuapp.com/auth/users/me/', requestOptions)
       .then(response => response.json())
       .then(user => {
-        console.log("ME", user)
+        // console.log("ME", user)
         if (user.messages) {
-          console.log('iff')
+          // console.log('iff')
           throw Error
         }
         this.props.setCurrentUser(user)
@@ -81,10 +77,10 @@ class App extends React.Component {
         if (user.patient) {
           this.props.setUserRole(user.patient.role)
           this.props.setPatientId(user.patient.id)
-          this.props.setFetchId(user.patient.userId)
+          this.props.setFetchId(user.patient.user_Id)
           this.props.setUserImage(user.patient.image)
         } else if (user.doctor) {
-          console.log('roole', user.doctor)
+          // console.log('roole', user.doctor)
           this.props.setUserRole(user.doctor.role)
           this.props.setFetchId(user.doctor.doctor)
           this.props.setDoctorId(user.doctor.pk)

@@ -4,14 +4,14 @@ import PatientsCard from './PatientsCard'
 
 
 const Details = ({ doctorId }) => {
-    console.log(doctorId)
+    // console.log(doctorId)
     const [patients, setPatients] = useState([])
-    console.log(patients)
+    // console.log(patients)
 
     const getAppointments = () => {
         // console.log('called')
         const obj = { doctorId }
-        console.log(obj)
+        // console.log(obj)
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -21,7 +21,7 @@ const Details = ({ doctorId }) => {
         fetch('https://acrux-hospital.herokuapp.com/day/date/doctor', requestOptions)
             .then(response => response.json())
             .then(data => {
-                console.log('patients', data)
+                // console.log('patients', data)
                 setPatients(data)
             })
     }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography, makeStyles } from '@material-ui/core';
+import { Card, CardActionArea, CardContent, CardMedia, Typography, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
@@ -12,7 +12,7 @@ const useStyles = makeStyles({
 });
 
 const RandomCard = ({ department }) => {
-    console.log('err',department)
+    // console.log('err',department)
     const classes = useStyles()
     return (
         <Link to={`/department/${department.pk}`} style={{ textDecoration: 'none' }}>

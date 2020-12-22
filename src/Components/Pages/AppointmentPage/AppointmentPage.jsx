@@ -8,7 +8,7 @@ import './Appointment.css'
 
 const AppointmentPage = ({ match, patientId }) => {
 
-    console.log('id patient', patientId)
+    // console.log('id patient', patientId)
     // const AvailableHours = [{isAvailable:true, hour:'9:00 AM'},{isAvailable:true, hour:'10:00 AM'}, {isAvailable:true, hour:'11:00 AM'}, {isAvailable:true, hour:'12:00 AM'}, {isAvailable:true, hour:'1:00 PM'}, {isAvailable:true, hour:'2:00 PM'},  ]
     
     const [date, setDate] = useState(null)
@@ -65,7 +65,7 @@ const AppointmentPage = ({ match, patientId }) => {
         let pk = null
         dates.forEach((Datadate) => {
             if (Datadate.date === date && Datadate.doctorId == doctorId) {
-                console.log('getpk', Datadate)
+                // console.log('getpk', Datadate)
                 pk = Datadate.pk
             }
         })
@@ -75,7 +75,7 @@ const AppointmentPage = ({ match, patientId }) => {
 
     const bookAppoint = () => {
         const obj = { dayId: getDatePk(), hour, doctorId, patientId }
-        console.log(obj)
+        // console.log(obj)
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -85,7 +85,7 @@ const AppointmentPage = ({ match, patientId }) => {
         fetch('https://acrux-hospital.herokuapp.com/day/hour', requestOptions)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 getHours()
                 if(data.non_field_errors){
                     throw Error
@@ -101,9 +101,9 @@ const AppointmentPage = ({ match, patientId }) => {
 
 
 
-    console.log(dates)
+    // console.log(dates)
     // console.log(date)
-    console.log('doctorId', doctorId)
+    // console.log('doctorId', doctorId)
     return (
         <div className='appointment'>
             <div className='appointment__img'>

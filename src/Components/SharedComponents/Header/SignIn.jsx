@@ -22,7 +22,7 @@ class SignIn extends React.Component {
         return fetch('https://acrux-hospital.herokuapp.com/auth/users/me/', requestOptions)
             .then(response => response.json())
             .then(data => {
-                console.log("ME", data)
+                // console.log("ME", data)
                 return data
             })
 
@@ -48,7 +48,7 @@ class SignIn extends React.Component {
                 return loader()
             })
             .then((data) => {
-                console.log("DISPATCH ME", data)
+                // console.log("DISPATCH ME", data)
                 if(data.code){
                     throw Error
                 }
