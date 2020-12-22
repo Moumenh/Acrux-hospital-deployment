@@ -35,7 +35,7 @@ class SignIn extends React.Component {
             body: JSON.stringify(data)
         };
 
-        fetch('https://acrux-hospital.herokuapp.com/auth', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/auth/jwt/create', requestOptions)
             .then(response => response.json())
             .then(data => {
                 // console.log("aaaaaaaaaaa", data)
