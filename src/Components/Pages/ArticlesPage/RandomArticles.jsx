@@ -9,7 +9,7 @@ import './Article.css'
 class Articles extends Component {
     
     componentDidMount = async () => {
-        var api = await fetch(`http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=756bad764879424c9c65361163f46baa`)
+        var api = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=756bad764879424c9c65361163f46baa`)
         var data = await api.json();
         const randomArticle = data["articles"]
        // console.log("artilcles", randomArticle)
