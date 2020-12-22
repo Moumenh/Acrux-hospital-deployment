@@ -32,7 +32,7 @@ SECRET_KEY = '4n$^2rn3#1^q_91mj6y*=yv-c+s-or+35nagmrmm-$bw^ie_p+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -91,7 +91,7 @@ ASGI_APPLICATION = "core.routing.application"
 
 CORS_ALLOW_ALL_ORIGINS=True
 
-ALLOWED_HOSTS = ['*']
+
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases

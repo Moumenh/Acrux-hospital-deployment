@@ -69,7 +69,7 @@ env/
 media/
 *.pyc
 *.db
-*.pid
+*.pidn
 
 # Ignore Django Migrations in Development if you are working on team
 
