@@ -79,3 +79,4 @@ media/
 !**/migrations/__init__.py
 **/**/migrations
 
+node_modules
