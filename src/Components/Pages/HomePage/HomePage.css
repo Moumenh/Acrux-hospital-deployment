@@ -1,0 +1,164 @@
+.homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+
+.homepage__picture{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/561feb4ee4b0de0eb30d6d3c/1580755887641-N9GEMHC4VZ69GE29RJ81/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0pE4cef1KNtWo36k-CFnr6wOF2g5O-PFkVuvW_ba6dQUZZpzEt6WQHHQe4EHY-NJIA/23153182_m.png?format=1500w);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.homepage__text{
+    color: azure;
+    position: absolute;
+    top: 190px;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: 0.5px solid white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+.homepage__text:hover{
+    background-color: rgba(245, 222, 179, 0.116);
+}
+
+.random{
+    max-width: 1366px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.about__avatar{
+    width: 50%;
+    height: 500px;
+    background-image: url(https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/illlustration.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.about__content{
+    margin-top: 30px;   
+    margin-left: 80px;
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    justify-content: flex-start;
+
+}
+
+.content__title{
+    width: 50%;
+    font-family: 'Titillium Web', sans-serif;
+    color: #013243;
+    font-style: normal;
+    font-weight: 700;
+    
+    
+}
+
+.content__desc{
+    width: 60%;
+    font-weight: normal;
+    color: #4A5764;
+    
+}
+
+.service{
+    max-width: 1336px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 75%;
+    background-image: url(https://shtheme.org/demosd/mecare/wp-content/themes/mecare/img/icon/sr-line.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 0.6px #7ac7f8); 
+    /* background-size: cover; */
+}
+
+.service_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.service_logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 3px 4px 15px #00000026;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.service_2{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.service_3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service_content{
+    margin-top : 20px;
+}
+
+.service_content h5{
+    font-weight: 700;
+    font-family: 'Titillium Web', sans-serif;
+} 
+
+
+
+@media only screen and (max-width: 850px) {
+    .service {
+      flex-direction: column;
+      background-image: none;
+      align-items: center;
+    }
+
+    .about{
+        flex-direction: column; 
+        align-items: center;
+    }
+  }
+
+

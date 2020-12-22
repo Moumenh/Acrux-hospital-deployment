@@ -1,0 +1,34 @@
+{
+  "departments": [
+    {
+      "title": "Nutrition Department",
+      "image": "http://www.iah.ps/admin/uploads/departments/20190622085518_Nutrition.jpg",
+      "about": "Nutrition Department at is one of the specialized departments that have been established in order to provide clinical nutrition services for inpatients and outpatients through the outpatient clinic. Nutrition Department is one of the best in the region Led by three Dietitians well qualified, experienced and registered at the Palestinian Ministry of Health (PMOH).   Dietitians collaborate with medical and non-medical hospital teams (physicians, nurses, physiotherapists, kitchen department, etc.) in all hospital wards (Oncology Ward, Pediatric Ward, Cardiac Ward, ICU, Surgical Ward, Postnatal Ward, Internal Ward and Orthopedic Ward) to establish and deliver the best-suited individual dietary care plan for inpatients."
+    },
+    {
+      "title": "ENT Department",
+      "image": "http://www.iah.ps/admin/uploads/departments/20190401120144_image002.jpg",
+      "about": " Nose and Throat Department is considered as one of the best in the region, with the best ENT Consultant running diagnosis, administering treatments, and performing surgical operations on a daily basis.   Also known as Otorhinolaryngology, ENT specialized in the treatment and care of diseases of ear, nose, throat and base skull, as well as surgical procedures for cancers and benign tumors of the head and neck."
+    },
+    {
+      "title": "Orthopedic Surgery Department",
+      "image": "http://www.iah.ps/admin/uploads/departments/20190430024246_department-of-orthopedic-500x500.jpg",
+      "about": "Orthopedic Surgery Department (for Arthroplasty, Spine and Sports Injuries) offers a variety of treatment arthroscopic and surgical management, using the latest equipment and modern technology."
+    },
+    {
+      "title": "Anesthesia and Recovery Department",
+      "image": "http://www.iah.ps/admin/uploads/departments/20171128111835_CCADpicanesthesiologydetail2.jpg",
+      "about": "The Anesthesia and Recovery Department provides all anesthesia and Recovery related services, ensuring patient safety and comfort during and after surgeries or procedures. In collaboration with other departments, the Anesthesia and Recovery department also offers a multidisciplinary Pain Management program for chronic pain needs and supports in the care of critically ill patients."
+    },
+    {
+      "title": "Urology Department",
+      "image": "http://www.iah.ps/admin/uploads/departments/20190312025719_UROLOGY-DEPARTMENT-inner.jpg",
+      "about": "This dep. provides a comprehensive range of advanced services to test, diagnose, treat and manage a wide range of diseases of the urology & andrology systems in the adult age group."
+    },
+    {
+      "title": "Cardiology Department",
+      "image": "http://www.iah.ps/admin/uploads/departments/20190622031201_82275163-female-medicine-doctor-hands-holding-and-covering-red-toy-heart-closeup-cardio-therapeutist-student-.jpg",
+      "about": "Physicians in the Cardiology Clinic Manage Patients with Cardiac problems such as Hypertension, High Cholesterol and Heart Attacks, with availability of Echo Cardio, Stress Test ECG, Holter Monitor ECG during 24 hours and Ambulatory Blood Pressure."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+/* #blood-image{
+   margin-left: 20px;
+   
+}*/
+#search{
+width: 400px;
+margin-right: 20px;
+align-items: center !important;
+justify-content: center;  
+margin-top: 20px;
+
+} 
+#main{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center;
+}
+#main-header{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover !important;
+    
+    
+}
+
+.bloodbank_img{
+    margin-top: 40px;
+    width: 60%;
+    height: 170px;
+    background-image: url(https://media.istockphoto.com/vectors/blood-donationisometric-3d-banner-header-vector-id1135268724?k=6&m=1135268724&s=170667a&w=0&h=bpNx4iO2tR7nlRHfamcX4HO_UPd9yABxnkP9IKe46CM=);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border-color:lightblue ;
+    border-style: solid;
+}
+#image-header{
+ align-items: center !important;
+  justify-content: center;
+    width: 60% !important;
+    height: 150px;
+    border-radius: 15px;
+    border-color:lightblue ;
+    border-style: solid;
+}
+.active-cyan input[type=text] {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+  #table{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+    /* align-items: center !important; */
+    /* justify-content: center; */
+      width:400px
+    }
+
+    #forTable{
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #for{
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: row; 
+    }
+    .pname{
+        padding-right: 240px;
+        /* background-color: lightcoral; */
+    }
+    .bname{
+        padding-right: 20px;
+    }
+    #send{
+        margin-left: 12px;
+    }

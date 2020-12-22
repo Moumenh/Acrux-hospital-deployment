@@ -1,0 +1,167 @@
+.profile {
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    margin-left: 40px;
+    margin-right: 40px;
+    /* height: 100%; */
+}
+
+.profile__left {
+    margin-top: 9px;
+    width: 20%;
+    border-radius: 30px;
+    /* box-shadow: 0 10px 6px -6px #777; */
+    box-shadow: 3px 4px 15px #00000026;
+    background-color: white;
+    /* border: 1px solid black; */
+    /* height: 100%; */
+}
+
+.profile__left__image {
+    overflow: hidden;
+    margin-top: 20px;
+    width: 12rem;
+    height: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/561feb4ee4b0de0eb30d6d3c/1580755887641-N9GEMHC4VZ69GE29RJ81/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0pE4cef1KNtWo36k-CFnr6wOF2g5O-PFkVuvW_ba6dQUZZpzEt6WQHHQe4EHY-NJIA/23153182_m.png?format=1500w);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile__right {
+    width: 77%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+    /* border: 1px solid black; */
+}
+
+.right__image {
+    width: 100%;
+    height: 17rem;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    
+    /* margin: 20px 20px; */
+}
+
+.right__content {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: start; */
+    width: 100%;
+}
+
+.content__left {
+    width: 70%;
+    /* border: 1px solid black; */
+}
+
+.content__left__collection {
+    margin-top: 30px;
+    margin-left: 9px;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    height: 9rem;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 3px 4px 15px #00000026;
+    background-color: white;
+}
+.image-div{
+    margin-right: 10px;
+}
+.chat-image{
+    width: 55px;
+    height: 55px;
+    border-radius: 30px;
+}
+
+
+
+.content__right {
+    margin-top: 0px;
+    width: 30%;
+    /* margin-bottom: 60px; */
+    /* border: 1px solid black; */
+}
+
+.user_details {
+    flex: .3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.user_card {
+    margin-top: 0.1rem;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user_image {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+    border-radius: 100px;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.user_info{
+    margin-top: 30px;
+}
+
+.user_upload{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user_inputfile {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+.user_inputfile + label {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: aquamarine;
+    box-shadow: 0 10px 6px -6px #777;
+    
+}
+
+.patients{
+    margin-top: 15px;
+    padding: 15px;
+}
+
+

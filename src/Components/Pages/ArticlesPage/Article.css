@@ -1,0 +1,19 @@
+.article{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .9;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.article_content{
+    background: none;
+    color: rgb(255, 255, 255)
+}

@@ -1,0 +1,102 @@
+.card_contaner
+{
+ 
+ display: flex;
+ flex-direction: row;
+ border-radius: 5px;
+ padding: 50px;
+ width: 450px;
+ 
+
+}
+#card{
+   
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    align-items:flex-end;
+    margin-bottom: 80px;
+    padding-top: 40px; 
+    width: 300px;
+    height: 300px;
+   
+
+}
+
+#random_article{
+    height: 220px;
+}
+.article_title{font-weight: bold;
+color: seashell;}
+
+.article_content{
+    background: rgba(105,105,105, 0.6);
+    color: seashell;
+
+}
+
+.dep_text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.dep_text_asem{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+/* //////////////////////////////////////////// */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.cardit{
+    background-color: white !important;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in !important;
+}
+
+.cardit:hover{
+    background-color: #43c0d5 !important;
+    /* background-color: linear-gradient(90deg, rgba(0,64,115,1) 0%, rgba(74,134,230,1) 54%, rgba(192,232,240,1) 100%); */
+}
+
+.cardit :hover > .zameel {
+    background-color: white !important;
+    /* z-index: 1; */
+}
+
+.cardit :hover > p {
+    color: white !important;
+    /* z-index: 1; */
+}
+
+.cardit :hover > h2 {
+    color: white !important;
+    /* z-index: 1; */
+}
+.content__title1{
+    width: 100%;
+    height: 370px;
+    background-image: url(https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/slider_img02.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke-color: black;
+}

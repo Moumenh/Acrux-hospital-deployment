@@ -1,0 +1,67 @@
+.cancer_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+
+.cancer_picture{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://shtheme.org/demosd/mecare/wp-content/uploads/2020/08/blog_img01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.cancer_text{
+    color: #013243;
+	position: absolute;
+	top: 190px;
+	font-weight: 900;
+	font-size: 70px;
+	padding: 15px 30px;
+    font-family: 'Titillium Web', sans-serif;
+    margin-right:100px;
+}
+
+#standard{
+    width: 400px;
+    text-align: left;
+    border-radius:30px;
+    border:1px ;
+}
+.cancer_form{
+    width: 100%;
+	margin-top: -10px;
+	height: 500px;
+}
+ #cancer_title
+ {
+    font-family: 'Titillium Web', sans-serif;
+    color: #013243;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: -50px;
+    font-weight: bold;
+}
+
+.cancer_form1{
+    width: 40%;
+    margin-top: 30px;
+    margin-left: 500px;
+}
+
+.cancer_result{
+    margin-top: 20px;
+    margin-left: 640px;
+    width: 400px;
+}
+
+.form_textfield{
+    margin-left: 40px;
+}
