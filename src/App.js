@@ -47,7 +47,7 @@ class App extends React.Component {
         'Authorization': localStorage.getItem("Authorization")
       },
     };
-    return fetch('https://acrux-hospital.herokuapp.com/auth/users/me', requestOptions)
+    return fetch('https://acrux-hospital.herokuapp.com/auth/users/me/', requestOptions)
       .then(response => response.json())
       .then(user => {
         console.log("ME", user)
