@@ -20,7 +20,7 @@ class PatientDoctorCreator(generics.CreateAPIView):
 
 @api_view(['POST'])
 def PateintDetails(request):
-    patient = Patient.objects.get(userId=request.data['pk']) # the 'get' return me back a model I can serialize
+    patient = Patient.objects.get(user_Id=request.data['pk']) # the 'get' return me back a model I can serialize
     serializer = PatientsSerializer(patient,many=False)
     return Response(serializer.data)
 

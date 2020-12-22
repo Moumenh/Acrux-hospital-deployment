@@ -4,7 +4,7 @@ from rest_framework import serializers
 
 class HourSerializer(serializers.ModelSerializer):
     date = serializers.CharField(source='dayId.date', read_only=True )
-    patientName = serializers.CharField(source='patientId.userId.name', read_only=True )
+    patientName = serializers.CharField(source='patientId.user_Id.name', read_only=True )
     doctorName = serializers.CharField(source='doctorId.doctor.name',read_only=True )
     class Meta:
         model = Hour

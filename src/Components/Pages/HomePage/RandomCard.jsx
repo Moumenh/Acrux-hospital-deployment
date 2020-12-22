@@ -12,7 +12,7 @@ const useStyles = makeStyles({
 });
 
 const RandomCard = ({ department }) => {
-    // console.log(department)
+    console.log('err',department)
     const classes = useStyles()
     return (
         <Link to={`/department/${department.pk}`} style={{ textDecoration: 'none' }}>

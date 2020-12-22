@@ -16,6 +16,7 @@ const useStyles = makeStyles({
 
 
 export default function DepCard({department}) {
+  // console.log('err',department)
   const classes = useStyles();
   return (
     <Link to={`/department/${department.pk}`}  style={{textDecoration:'none'}}>
