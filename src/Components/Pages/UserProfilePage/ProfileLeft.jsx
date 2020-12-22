@@ -35,12 +35,12 @@ const ProfileLeft = ({ currentUser, email, image, role, patientId, doctorId, set
       body: JSON.stringify(obj)
     };
     if (role === 'patient') {
-      fetch('http://127.0.0.1:8000/patient/upload', requestOptions)
+      fetch('https://acrux-hospital.herokuapp.com/patient/upload', requestOptions)
         .then(response => response.json())
         .then(data => console.log(data));
     }
     if (role === 'doctor') {
-      fetch('http://127.0.0.1:8000/doctor/update', requestOptions)
+      fetch('https://acrux-hospital.herokuapp.com/doctor/update', requestOptions)
         .then(response => response.json())
         .then(data => console.log(data));
     }

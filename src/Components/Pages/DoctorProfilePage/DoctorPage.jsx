@@ -17,7 +17,7 @@ class DoctorPage extends React.Component {
         this.getDoctors()
     }
     getDoctors = () => {
-        fetch('http://localhost:8000/doctor/')
+        fetch('https://acrux-hospital.herokuapp.com/doctor/')
             .then(response => response.json())
             .then(doctor => {
                 console.log("result", doctor)

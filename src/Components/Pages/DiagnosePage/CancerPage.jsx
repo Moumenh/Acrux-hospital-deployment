@@ -36,7 +36,7 @@ class CancerPage extends React.Component {
             body: JSON.stringify(obj)
         };
 
-        fetch('http://localhost:8000/doctor/cancer', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/doctor/cancer', requestOptions)
             .then(response => response.json())
             .then(result => {
                 console.log(result)

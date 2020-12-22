@@ -18,7 +18,7 @@ class BloodBankMain extends React.Component {
  
       //fetch doctor
       var BloodUsers = []
-      fetch('http://127.0.0.1:8000/doctor/')
+      fetch('https://acrux-hospital.herokuapp.com/doctor/')
       .then(response => response.json())
       .then(doctors => {
         for(var i = 0 ; i < doctors.length ; i++){
@@ -28,7 +28,7 @@ class BloodBankMain extends React.Component {
         console.log("doctors",doctors)
       })
         //fetch patient
-        fetch('http://127.0.0.1:8000/patient/')
+        fetch('https://acrux-hospital.herokuapp.com/patient/')
         .then(response => response.json())
         .then(patients => {
           for(var i = 0 ; i < patients.length ; i++){

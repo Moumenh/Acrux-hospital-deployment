@@ -17,7 +17,7 @@ const DoctorProfile = ({ setMessageContacts, role, fetchId, contactArray, setCon
             body: JSON.stringify(obj)
         };
         if (role === "patient") {
-            fetch('http://localhost:8000/patient/details', requestOptions)
+            fetch('https://acrux-hospital.herokuapp.com/patient/details', requestOptions)
                 .then(response => response.json())
                 .then(data => {
                     setMessageContacts(data.doctors)
@@ -25,7 +25,7 @@ const DoctorProfile = ({ setMessageContacts, role, fetchId, contactArray, setCon
                 })
         }
         if (role === "doctor") {
-            fetch('http://localhost:8000/doctor/details', requestOptions)
+            fetch('https://acrux-hospital.herokuapp.com/doctor/details', requestOptions)
                 .then(response => response.json())
                 .then(data => {
                     setMessageContacts(data.patients)

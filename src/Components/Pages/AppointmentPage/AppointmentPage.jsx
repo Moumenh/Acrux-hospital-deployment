@@ -23,7 +23,7 @@ const AppointmentPage = ({ match, patientId }) => {
     const handleHours = (e) => setHour(e.target.value)
 
     const getDates = () => {
-        fetch('http://localhost:8000/day/date')
+        fetch('https://acrux-hospital.herokuapp.com/day/date')
             .then(response => response.json())
             .then(data => setDates(data))
     }
@@ -37,7 +37,7 @@ const AppointmentPage = ({ match, patientId }) => {
                 body: JSON.stringify(obj)
             };
 
-            fetch('http://localhost:8000/day/date/details', requestOptions)
+            fetch('https://acrux-hospital.herokuapp.com/day/date/details', requestOptions)
                 .then(response => response.json())
                 .then(data => {
                     // const unavHours = []
@@ -82,7 +82,7 @@ const AppointmentPage = ({ match, patientId }) => {
             body: JSON.stringify(obj)
         };
 
-        fetch('http://localhost:8000/day/hour', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/day/hour', requestOptions)
             .then(response => response.json())
             .then(data => {
                 console.log(data)

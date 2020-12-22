@@ -27,7 +27,7 @@ class SignUp extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(obj)
         };
-        fetch('http://localhost:8000/auth/users/', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/auth/users/', requestOptions)
             .then(response => response.json())
             .then(data => {
                 // console.log(data)

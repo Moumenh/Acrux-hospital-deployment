@@ -34,7 +34,7 @@ class ChatShell extends React.Component {
             body: JSON.stringify(obj)
         };
        if(this.props.role==="patient"){
-        fetch('http://localhost:8000/patient/details',requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/patient/details',requestOptions)
             .then(response => response.json())
             .then(data => {
                 this.props.setMessageContacts(data.doctors)
@@ -43,7 +43,7 @@ class ChatShell extends React.Component {
             })
        }
        if(this.props.role==="doctor"){
-        fetch('http://localhost:8000/doctor/details',requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/doctor/details',requestOptions)
             .then(response => response.json())
             .then(data => {
                 this.props.setMessageContacts(data.patients)

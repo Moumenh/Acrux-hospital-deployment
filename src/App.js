@@ -28,7 +28,7 @@ class App extends React.Component {
 
   componentDidMount = () => {
     this.loadUser()
-    fetch('http://127.0.0.1:8000/department/')
+    fetch('https://acrux-hospital.herokuapp.com/department/')
       .then(response => response.json())
       .then(data => {
         //this.setState({departments : data})
@@ -47,7 +47,7 @@ class App extends React.Component {
         'Authorization': localStorage.getItem("Authorization")
       },
     };
-    return fetch('http://localhost:8000/auth/users/me', requestOptions)
+    return fetch('https://acrux-hospital.herokuapp.com/auth/users/me', requestOptions)
       .then(response => response.json())
       .then(user => {
         console.log("ME", user)
@@ -74,7 +74,7 @@ class App extends React.Component {
     };
 
 
-    fetch('http://localhost:8000/user/details', requestOptions)
+    fetch('https://acrux-hospital.herokuapp.com/user/details', requestOptions)
       .then(response => response.json())
       .then(user => {
         // console.log(user.doctor.role)

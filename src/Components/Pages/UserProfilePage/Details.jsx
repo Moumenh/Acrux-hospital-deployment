@@ -18,7 +18,7 @@ const Details = ({ doctorId }) => {
             body: JSON.stringify(obj)
         };
 
-        fetch('http://localhost:8000/day/date/doctor', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/day/date/doctor', requestOptions)
             .then(response => response.json())
             .then(data => {
                 console.log('patients', data)

@@ -19,7 +19,7 @@ class SignIn extends React.Component {
             method: 'GET',
             headers: { 'Content-Type': 'application/json', 'Authorization': localStorage.getItem("Authorization") },
         };
-        return fetch('http://localhost:8000/auth/users/me', requestOptions)
+        return fetch('https://acrux-hospital.herokuapp.com/auth/users/me', requestOptions)
             .then(response => response.json())
             .then(data => {
                 console.log("ME", data)
@@ -35,7 +35,7 @@ class SignIn extends React.Component {
             body: JSON.stringify(data)
         };
 
-        fetch('http://localhost:8000/auth/jwt/create', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/auth/jwt/create', requestOptions)
             .then(response => response.json())
             .then(data => {
                 // console.log("aaaaaaaaaaa", data)

@@ -21,7 +21,7 @@ class DepartmentDoctor extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(obj)
         };
-        fetch('http://localhost:8000/department/details', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/department/details', requestOptions)
             .then(response => response.json())
             .then(data => {
                 this.setState({ result: data.doctors})

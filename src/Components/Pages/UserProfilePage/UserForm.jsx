@@ -28,7 +28,7 @@ const UserForm = ({ id }) => {
                 body: JSON.stringify(obj)
             };
 
-            fetch('http://localhost:8000/patient/', requestOptions)
+            fetch('https://acrux-hospital.herokuapp.com/patient/', requestOptions)
                 .then(response => response.json())
                 .then(data => window.location.reload())
         } else {

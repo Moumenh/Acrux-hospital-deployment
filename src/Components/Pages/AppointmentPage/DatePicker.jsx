@@ -27,7 +27,7 @@ export default function DatePicker({ setDate, getDates, setAvHour, doctorId }) {
       body: JSON.stringify(date)
     };
 
-    fetch('http://localhost:8000/day/date', requestOptions)
+    fetch('https://acrux-hospital.herokuapp.com/day/date', requestOptions)
       .then(response => response.json())
       .then(data => console.log(data))
   }

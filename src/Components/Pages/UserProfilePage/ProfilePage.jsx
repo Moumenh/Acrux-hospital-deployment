@@ -19,7 +19,7 @@ class UsersProfile extends React.Component {
     }
     componentDidMount = () => {
         console.log("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
-        fetch('http://localhost:8000/user/')
+        fetch('https://acrux-hospital.herokuapp.com/user/')
             .then(response => response.json())
             .then(data => {
                 let resultObject = {}

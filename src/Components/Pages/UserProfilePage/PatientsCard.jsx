@@ -30,7 +30,7 @@ export default function PatientsCard({ patient,getAppointments }) {
             body: JSON.stringify(obj)
         };
 
-        fetch('http://localhost:8000/patient/accept', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/patient/accept', requestOptions)
             .then(response => response.json())
             .then(data => {
                 if (data.non_field_errors) {
@@ -50,7 +50,7 @@ export default function PatientsCard({ patient,getAppointments }) {
             body: JSON.stringify(obj)
         };
 
-        fetch('http://localhost:8000/day/delete', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/day/delete', requestOptions)
             .then(response => response.json())
             .then(data => {
                 console.log('deleted',data)

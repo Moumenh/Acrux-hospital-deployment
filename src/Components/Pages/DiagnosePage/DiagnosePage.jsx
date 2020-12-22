@@ -40,7 +40,7 @@ class DiagnosePage extends React.Component {
             body: JSON.stringify(obj)
         };
 
-        fetch('http://localhost:8000/doctor/heart', requestOptions)
+        fetch('https://acrux-hospital.herokuapp.com/doctor/heart', requestOptions)
             .then(response => response.json())
             .then(result => {
                 console.log(result)
