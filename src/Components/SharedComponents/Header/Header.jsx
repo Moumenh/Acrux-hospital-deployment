@@ -4,9 +4,9 @@ import { connect } from "react-redux"
 import { Link } from 'react-router-dom'
 import RegisterDialog from "./RegisterDialog"
 import { Button, Avatar } from '@material-ui/core'
-import { setCurrentUser, setUserRole, setUserImage, setMessageContacts, setLastTextObject, setContactTitle, setFetchId, setDoctorId, setChatArray } from '../../../Redux/User/userActions'
+import { setCurrentUser, setUserRole, setUserImage, setMessageContacts, setLastTextObject, setContactTitle, setFetchId, setDoctorId, setChatArray,setPatientId } from '../../../Redux/User/userActions'
 
-const Header = ({setChatArray, currentUser, setLastTextObject, setCurrentUser, setUserRole, image, setUserImage, setMessageContacts, setContactTitle, setFetchId, setDoctorId, role }) => {
+const Header = ({setChatArray, currentUser, setLastTextObject, setCurrentUser, setUserRole, image, setUserImage, setMessageContacts, setContactTitle, setFetchId, setDoctorId, role, setPatientId }) => {
     // console.log(currentUser)
     return (
 
@@ -45,6 +45,7 @@ const Header = ({setChatArray, currentUser, setLastTextObject, setCurrentUser, s
                                 setFetchId(null)
                                 setLastTextObject({})
                                 setDoctorId(null)
+                                setPatientId(null)
                             }}> LogOut </Button>
 
                         </div>
@@ -74,7 +75,8 @@ const mapDispatchToProps = (dispatch) => {
         setFetchId: id => dispatch(setFetchId(id)),
         setLastTextObject: obj => dispatch(setLastTextObject(obj)),
         setDoctorId: id => dispatch(setDoctorId(id)),
-        setChatArray: array => dispatch(setChatArray(array))
+        setChatArray: array => dispatch(setChatArray(array)),
+        setPatientId: id => dispatch(setPatientId(id))
 
 
     }

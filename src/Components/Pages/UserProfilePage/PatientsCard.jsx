@@ -79,7 +79,7 @@ export default function PatientsCard({ patient, getAppointments }) {
                                 Hour : {patient.hour}
                             </Typography>
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '80px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '60px' }}>
                             <CheckIcon onClick={acceptPatient} style={{ color: 'green', cursor: 'pointer' }} />
                             <CloseIcon onClick={declinePatient} style={{ color: 'red', cursor: 'pointer' }} />
                         </div>

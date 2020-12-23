@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 const UserForm = ({ id }) => {
 
     const [BloodType, setBloodType] = useState('')
+    const [address, setAddress] = useState('')
 
     const postPatient = (e) => {
         e.preventDefault()
@@ -34,13 +35,14 @@ const UserForm = ({ id }) => {
         } else {
             alert('Please enter a valid blood type')
             setBloodType('')
+            setAddress('')
         }
 
     }
 
     return (
         <div>
-            <h3 style={{marginTop:'40px'}}>In Order you use our site services please enter your BloodType</h3>
+            <h5 style={{marginTop:'50px',marginLeft:'5%', textAlign:'start',padding:'10px',width:'70%'}}>In Order to use our site services please enter your BloodType and Address</h5>
             <form onSubmit={postPatient}  >
                 <TextField className='Input'
                     label="Your Blood Type"
@@ -48,6 +50,14 @@ const UserForm = ({ id }) => {
                     onChange={(e) => setBloodType(e.target.value)}
                     type='text'
                     name='BloodType'
+                    required
+                />
+                <TextField className='Input'
+                    label="Address"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                    type='text'
+                    name='address'
                     required
                 />
                 

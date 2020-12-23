@@ -1,7 +1,7 @@
 .form_page{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin: 0;
     position: relative;
@@ -29,9 +29,9 @@
     margin-right: 40px;
 }
 
-#standard-basic{
-    width: 400px;
-    text-align: left;
+.standard-basic{
+    width: 73% !important;
+    
 }
 .form{
     width: 100%;
@@ -50,29 +50,34 @@
 }
 
 .form1{
-    width: 40%;
-    margin-left:50px;
+    width: 50%;
+    /* margin-left:50px; */
 }
-.form2{
+.form1{
 
-    width: 40%;
-    margin-top: -335px;
-    margin-left: 700px;
+    width: 50%;
+    /* margin-top: -335px;
+    margin-left: 700px; */
 }
 .result{
-    margin-left: -290px;
+    margin-right:100%;
     width: 400px;
 }
 
 .form_textfield{
     height: 98%;
-    width: 70%;
-    margin-left:300px;
+    width: 90%;
+    padding: 40px;
+    /* margin-left:300px; */
     background: white padding-box;
 	box-shadow: 3px 4px 15px #0000001A;
 	border-radius: 10px;
     border-color: #013243;
     margin-bottom: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .cancer__form{

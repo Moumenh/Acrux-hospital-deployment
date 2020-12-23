@@ -60,52 +60,52 @@ class DiagnosePage extends React.Component {
         const { age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, probability, label } = this.state
         return (
             <div className='form_page'>
-                <div className='form_picture'></div>
-                <div className='form_text'>
+                <div className='cancer_picture'><h3 className='content__title'>Heart Attack Form</h3></div>
+                {/* <div className='form_text'> */}
                     {/* <h1 >Diagnose Heart  Attack</h1> */}
-                </div>
-                <h3 id="form_title">Heart Attack Form</h3>
+                {/* </div> */}
+                {/* <h3 id="form_title">Heart Attack Form</h3> */}
 
-                <div className='form'>
-                    <form onSubmit={this.onSubmit} className='form_textfield'>
-                        <div className='form1'>
-                            <TextField id="standard-basic" label="Your age in years" onChange={this.handleChange} name='age' type='text' value={age} required />
-                            <br />
-                            <TextField id="standard-basic" label="1 = male; 0 = female" onChange={this.handleChange} name='sex' type='text' value={sex} required />
-                            <br />
-                            <TextField id="standard-basic" label="Chest pain type" onChange={this.handleChange} name='cp' type='text' value={cp} required />
-                            <br />
-                            <TextField id="standard-basic" label="Resting blood pressure" onChange={this.handleChange} name='trestbps' type='text' value={trestbps} required />
-                            <br />
-                            <TextField id="standard-basic" label="Serum cholestoral in mg/dl" onChange={this.handleChange} name='chol' type='text' value={chol} required />
-                            <br />
-                            <TextField id="standard-basic" label="(fasting blood sugar > 120 mg/dl)" onChange={this.handleChange} name='fbs' type='text' value={fbs} required />
-                            <br />
-                            <TextField id="standard-basic" label="Electrocardiographic results" onChange={this.handleChange} name='restecg' type='text' value={restecg} required />
+
+                <form onSubmit={this.onSubmit} className='form_textfield'>
+                    <div className='form1'>
+                        <TextField className="standard-basic" label="Your age in years" onChange={this.handleChange} name='age' type='text' value={age} required />
+                        <br />
+                        <TextField className="standard-basic" label="1 = male; 0 = female" onChange={this.handleChange} name='sex' type='text' value={sex} required />
+                        <br />
+                        <TextField className="standard-basic" label="Chest pain type" onChange={this.handleChange} name='cp' type='text' value={cp} required />
+                        <br />
+                        <TextField className="standard-basic" label="Resting blood pressure" onChange={this.handleChange} name='trestbps' type='text' value={trestbps} required />
+                        <br />
+                        <TextField className="standard-basic" label="Serum cholestoral in mg/dl" onChange={this.handleChange} name='chol' type='text' value={chol} required />
+                        <br />
+                        <TextField className="standard-basic" label="(fasting blood sugar > 120 mg/dl)" onChange={this.handleChange} name='fbs' type='text' value={fbs} required />
+                        <br />
+                        <TextField className="standard-basic" label="Electrocardiographic results" onChange={this.handleChange} name='restecg' type='text' value={restecg} required />
+                    </div>
+                    <div className='form1'>
+                        <TextField className="standard-basic" label="Maximum heart rate achieved" onChange={this.handleChange} name='thalach' type='text' value={thalach} required />
+                        <br />
+                        <TextField className="standard-basic" label="Exercise induced angina (1 = yes; 0 = no)" onChange={this.handleChange} name='exang' type='text' value={exang} required />
+                        <br />
+                        <TextField className="standard-basic" label="ST depression induced by exercise" onChange={this.handleChange} name='oldpeak' type='text' value={oldpeak} required />
+                        <br />
+                        <TextField className="standard-basic" label="The slope of the peak exercise ST segment" onChange={this.handleChange} name='slope' type='text' value={slope} required />
+                        <br />
+                        <TextField className="standard-basic" label="number of major vessels (0-3)" onChange={this.handleChange} name='ca' type='text' value={ca} required />
+                        <br />
+                        <TextField className="standard-basic" label="3 = normal; 6 = fixed defect; 7 = reversable defect" onChange={this.handleChange} name='thal' type='text' value={thal} required />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div className='result'>
+                            <CustomizedDialogs result={this.postRequest} label={label} probability={probability} />
                         </div>
-                        <div className='form2'>
-                            <TextField id="standard-basic" label="Maximum heart rate achieved" onChange={this.handleChange} name='thalach' type='text' value={thalach} required />
-                            <br />
-                            <TextField id="standard-basic" label="Exercise induced angina (1 = yes; 0 = no)" onChange={this.handleChange} name='exang' type='text' value={exang} required />
-                            <br />
-                            <TextField id="standard-basic" label="ST depression induced by exercise" onChange={this.handleChange} name='oldpeak' type='text' value={oldpeak} required />
-                            <br />
-                            <TextField id="standard-basic" label="The slope of the peak exercise ST segment" onChange={this.handleChange} name='slope' type='text' value={slope} required />
-                            <br />
-                            <TextField id="standard-basic" label="number of major vessels (0-3)" onChange={this.handleChange} name='ca' type='text' value={ca} required />
-                            <br />
-                            <TextField id="standard-basic" label="3 = normal; 6 = fixed defect; 7 = reversable defect" onChange={this.handleChange} name='thal' type='text' value={thal} required />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <div className='result'>
-                                <CustomizedDialogs result={this.postRequest} label={label} probability={probability} />
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
+
             </div>
 
         )

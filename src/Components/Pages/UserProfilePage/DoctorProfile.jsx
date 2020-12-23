@@ -45,6 +45,7 @@ const DoctorProfile = ({ setMessageContacts, role, fetchId, contactArray, setCon
     return (
         <div className="content__left">
             <div className="content__left__collection">
+                <h6>Contacts</h6>
                 {contactArray ?
                     contactArray.map((oneContact, id) => {
                         return (

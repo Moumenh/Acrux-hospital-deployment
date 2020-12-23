@@ -56,11 +56,11 @@ class CancerPage extends React.Component {
         const { Clump_Thickness, Cell_Size_Uniformity, Cell_Shape_Uniformity, Marginal_Adhesion, Single_Epi_Cell_Size, Bare_Nuclei, Bland_Chromatin, Normal_Nucleoli, Mitoses, probability, label } = this.state
         return (
             <div className='cancer_page'>
-                <div className='cancer_picture'></div>
-                <div className='cancer_text'>
-                    {/* <h1 >Diagnose Cancer</h1> */}
-                </div>
-                <h3 id="cancer_title">Cancer Form</h3>
+                <div className='cancer_picture'><h1 className='content__title' >Breast Cancer Diagnosis</h1></div>
+                {/* <div className='cancer_text'>
+                    
+                </div> */}
+                {/* <h3 id="cancer_title">Cancer Form</h3> */}
 
                 <div className='cancer__form'>
                     <form onSubmit={this.onSubmit}>
